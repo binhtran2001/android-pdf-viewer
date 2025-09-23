@@ -1,0 +1,30 @@
+plugins {
+    id 'com.android.fused-library'
+    id 'maven-publish'
+}
+
+group = "com.github.binhtran2001"
+
+androidFusedLibrary {
+    namespace 'com.github.barteksc.pdfviewer.fused'
+    minSdk 21
+}
+
+dependencies {
+    include project(':android-pdf-viewer')
+    include 'io.github.oothp:pdfium-android:1.9.5-beta01'
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = "com.github.binhtran2001"
+            artifactId = "android-pdf-viewer-fused"
+            version = "3.2.5"
+
+            afterEvaluate {
+                from components.fusedLibraryComponent
+            }
+        }
+    }
+}
