@@ -1,6 +1,7 @@
 TARGET="./android-pdf-viewer-fused/build/outputs/aar/"
 OUTPUT="build/outputs/aar/"
 TARGET_NAME="android-pdf-viewer-fused.aar"
+OUTPUT_NAME="android-pdf-viewer.aar"
 
 ./gradlew :android-pdf-viewer-fused:publishToMavenLocal
 if [ ! -f $TARGET/$TARGET_NAME ]; then
@@ -12,6 +13,6 @@ if [ ! -d $OUTPUT ]; then
     mkdir -p $OUTPUT
 fi
 
-mv $TARGET/$TARGET_NAME $OUTPUT/$TARGET_NAME
+mv $TARGET/$TARGET_NAME $OUTPUT/$OUTPUT_NAME
 
-echo "Library built at $OUTPUT$TARGET_NAME"
+echo "Library built at $OUTPUT$OUTPUT_NAME"
