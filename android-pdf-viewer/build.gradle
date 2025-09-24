@@ -38,7 +38,7 @@ afterEvaluate {
             create("release", MavenPublication) {
                 groupId = "com.github.binhtran2001"
                 artifactId = "android-pdf-viewer"
-                version = "3.2.5"
+                version = "3.2.1-alpha"
 
                 from components.release
             }

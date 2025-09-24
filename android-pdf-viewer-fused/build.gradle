@@ -20,7 +20,7 @@ publishing {
         release(MavenPublication) {
             groupId = "com.github.binhtran2001"
             artifactId = "android-pdf-viewer-fused"
-            version = "3.2.5"
+            version = "3.2.1-alpha"
 
             afterEvaluate {
                 from components.fusedLibraryComponent
