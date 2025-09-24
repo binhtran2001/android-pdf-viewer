@@ -7,12 +7,18 @@ group = "com.github.binhtran2001"
 
 androidFusedLibrary {
     namespace 'com.github.barteksc.pdfviewer.fused'
-    minSdk 21
+    minSdk 26
+}
+
+repositories {
+    flatDir {
+        dirs '../android-pdf-viewer/libs'
+    }
 }
 
 dependencies {
+    include(name: 'PdfiumAndroid', ext: 'aar')
     include project(':android-pdf-viewer')
-    include 'io.github.oothp:pdfium-android:1.9.5-beta01'
 }
 
 publishing {

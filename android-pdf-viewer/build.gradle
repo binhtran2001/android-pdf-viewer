@@ -29,7 +29,7 @@ android {
 
 dependencies {
     implementation 'androidx.core:core:1.17.0'
-    api 'io.github.oothp:pdfium-android:1.9.5-beta01'
+    api files('libs/PdfiumAndroid.aar')
 }
 
 afterEvaluate {
